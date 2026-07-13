@@ -22,7 +22,9 @@ This repository contains a comprehensive dataset of natural radionuclides (²²�
 
 ## Repository Structure
 
+```
 radionuclide-dataset/
+│
 ├── data/ # Raw data (not included in Zenodo)
 │ └── OriginalData.xlsx
 │
@@ -31,7 +33,7 @@ radionuclide-dataset/
 │ ├── config.yaml # Configuration file
 │ └── requirements.txt # Python dependencies
 │
-├── dataset_zenodo/ # Complete dataset for Zenodo
+├── dataset_zenodo/ # 🎯 Complete dataset for Zenodo
 │ ├── README.md # Dataset description
 │ ├── dados/ # Processed data files
 │ │ ├── dados_processados.csv # ML format (sep=, dec=.)
@@ -58,6 +60,7 @@ radionuclide-dataset/
 │
 ├── LICENSE # MIT License
 └── README.md # This file
+```  
 
 ---
 
