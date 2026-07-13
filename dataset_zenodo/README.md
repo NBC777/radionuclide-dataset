@@ -156,6 +156,7 @@ Where:
 
 If you use this dataset in your research, please cite:
 
+```bibtex
 @phdthesis{leandro_2024_radionuclide,
   author       = {Leandro Barbosa da Silva},
   title        = {ANÁLISE RADIOMÉTRICA DE MATERIAIS DE CONSTRUÇÃO
@@ -169,9 +170,12 @@ REFERÊNCIA E INCIDÊNCIA DE RISCOS},
   doi          = {10.5281/zenodo.XXXXXXX},
   url          = {https://www.nuclear.ufrj.br/images/undefined/Tese_Leandro_Barbosa_da_Silva.pdf}
 }
+``` 
 
-@dataset{nancy_2026_radionuclide,
-  author       = {Nancy, [Full Name]},
+
+```bibtex
+@dataset{barbosa_baygorrea_2026_radionuclide,
+  author       = {Leandro Barbosa and Nancy Baygorrea},
   title        = {Radionuclide Dataset for Construction Materials},
   year         = {2026},
   publisher    = {Zenodo},
@@ -179,7 +183,7 @@ REFERÊNCIA E INCIDÊNCIA DE RISCOS},
   doi          = {10.5281/zenodo.XXXXXXX},
   url          = {https://doi.org/10.5281/zenodo.XXXXXXX}
 }
-
+```  
 ---
 
 # Authors and Acknowledgments

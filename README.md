@@ -275,7 +275,7 @@ The dataset has undergone rigorous validation:
 If you use this dataset in your research, please cite:
 
 ```bibtex
-@dataset{barbosa_2026_radionuclide,
+@dataset{barbosa_baygorrea_2026_radionuclide,
   author       = {Leandro Barbosa and Nancy Baygorrea},
   title        = {Radionuclide Dataset for Construction Materials},
   year         = {2026},
