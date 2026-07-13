@@ -139,9 +139,9 @@ Open dataset_zenodo/dados/dados_processados.xlsx directly.
 | **Raeq** | Radium equivalent activity | Bq/kg | 220.81 ± 141.25 | 19.01 | 1295.24 |
 | **Theq** | Thorium equivalent activity | Bq/kg | 155.19 ± 98.90 | 13.32 | 906.58 |
 | **Keq** | Potassium equivalent activity | Bq/kg | 2651.97 ± 1811.04 | 249.76 | 16805.86 |
-| **IA** | Activity concentration index | - | 0.37 ± 0.22 | 0.04 | 1.33 |
-| **IB** | External radiation index | - | 0.71 ± 0.42 | 0.06 | 3.77 |
-| **IG** | Internal radiation index | - | 0.80 ± 0.50 | 0.07 | 4.52 |
+| **IA** | Alpha radiation index | - | 0.37 ± 0.22 | 0.04 | 1.33 |
+| **IB** | Brazilian  radiation index | - | 0.71 ± 0.42 | 0.06 | 3.77 |
+| **IG** | Gamma radiation index | - | 0.80 ± 0.50 | 0.07 | 4.52 |
 
 *Note: Full descriptive statistics available in `dataset_zenodo/documentacao/estatisticas_descritivas.csv`.*
 
@@ -289,18 +289,22 @@ If you use this dataset in your research, please cite:
 
 | Author | Contribution |
 |--------|--------------|
-| **Leandro Barbosa** | Data collection and research |
+| **Leandro Barbosa^{1}** | Data collection and research |
 | **Nancy Baygorrea** | Preprocessing and documentation |
+
+---
 
 ### Institutional Support
 
-- **Laboratory of Simulation and Nuclear Physics**  
-  Federal University of Rio de Janeiro (UFRJ)
+**^{1}** Laboratory of Simulation and Nuclear Physics  
+Federal University of Rio de Janeiro (UFRJ)
+
+---
 
 ### Funding
 
-- **Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)**  
-  Grant/Protocol Number: [XXXXX]
+**^{1}** This research was supported by the **Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)**  
+Grant/Protocol Number: [XXXXX]
 
 ---
 
