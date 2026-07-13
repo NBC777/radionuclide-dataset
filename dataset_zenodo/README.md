@@ -81,9 +81,9 @@ Complete code for data preprocessing and reproducibility. See `codigo/README.md`
 | **Raeq** | Radium equivalent activity | Bq/kg | 220.81 ± 141.25 | 19.01 | 1295.24 |
 | **Theq** | Thorium equivalent activity | Bq/kg | 155.19 ± 98.90 | 13.32 | 906.58 |
 | **Keq** | Potassium equivalent activity | Bq/kg | 2651.97 ± 1811.04 | 249.76 | 16805.86 |
-| **IA** | Activity concentration index | - | 0.37 ± 0.22 | 0.04 | 1.33 |
-| **IB** | External radiation index | - | 0.71 ± 0.42 | 0.06 | 3.77 |
-| **IG** | Internal radiation index | - | 0.80 ± 0.50 | 0.07 | 4.52 |
+| **IA** | Alpha radiation index | - | 0.37 ± 0.22 | 0.04 | 1.33 |
+| **IB** | Brazilian  radiation index | - | 0.71 ± 0.42 | 0.06 | 3.77 |
+| **IG** | Gamma radiation index | - | 0.80 ± 0.50 | 0.07 | 4.52 |
 
 *Note: Full descriptive statistics available in `documentacao/estatisticas_descritivas.csv`.*
 
