@@ -33,7 +33,7 @@ radionuclide-dataset/
 │ ├── config.yaml # Configuration file
 │ └── requirements.txt # Python dependencies
 │
-├── dataset_zenodo/ # 🎯 Complete dataset for Zenodo
+├── dataset_zenodo/ #  Complete dataset for Zenodo
 │ ├── README.md # Dataset description
 │ ├── dados/ # Processed data files
 │ │ ├── dados_processados.csv # ML format (sep=, dec=.)
