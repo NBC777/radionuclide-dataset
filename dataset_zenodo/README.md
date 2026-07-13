@@ -124,29 +124,22 @@ Theq = ATh + 0.7 × ARa + 0.045 × AK
 Keq = AK + 13 × ARa + 10 × ATh
 ```
 
-###  Activity Concentration Index (IA)
+###  Radiation  Index
 ```math
 
 IA = ARa/300 + ATh/200 + AK/3000
-```
-
-### External Radiation Index (IB)
-```math
 IB = ARa/370 + ATh/259 + AK/4810
-```
-
-### Internal Radiation Index (IG)
-```math
 IG = ARa/185 + ATh/259 + AK/4810
 ```
 
+
 Where:
 ```math
-    ARa = Activity of ²²⁶Ra (Bq/kg)
+    ARa = \text{Activity of} ²²⁶Ra (Bq/kg)
 
-    ATh = Activity of ²³²Th (Bq/kg)
+    ATh = \text{Activity of} ²³²Th (Bq/kg)
 
-    AK = Activity of ⁴⁰K (Bq/kg)
+    AK = \text{Activity of} ⁴⁰K (Bq/kg)
 
 ```
 
@@ -208,7 +201,6 @@ REFERÊNCIA E INCIDÊNCIA DE RISCOS},
 ### Contributions
 - **Leandro Barbosa**: Research design, data collection, experimental measurements, sample preparation
 - **Nancy Baygorrea**: Data preprocessing, validation, documentation, dataset organization, figure generation
-
 
 
 ---
