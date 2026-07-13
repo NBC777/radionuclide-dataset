@@ -196,7 +196,7 @@ The potassium equivalent activity represents the contribution of potassium to th
 Keq = AK + 13 × ARa + 10 × ATh
 ```
 
-###  Activity Concentration Index (IA)
+###  Alpha Radiation  Index (IA)
 
 The activity concentration index is used to assess the radiological risk from building materials, with a recommended limit of IA ≤ 1 for materials used in bulk quantities.
 

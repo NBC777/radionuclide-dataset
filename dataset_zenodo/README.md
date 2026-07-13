@@ -135,9 +135,9 @@ IG = ARa/185 + ATh/259 + AK/4810
 
 Where:
 ```math
-    ARa = \text{Activity of} ²²⁶Ra (Bq/kg)
+    ARa = \text{Activity of} ²²⁶Ra (Bq/kg)\\
 
-    ATh = \text{Activity of} ²³²Th (Bq/kg)
+    ATh = \text{Activity of} ²³²Th (Bq/kg)\\
 
     AK = \text{Activity of} ⁴⁰K (Bq/kg)
 
