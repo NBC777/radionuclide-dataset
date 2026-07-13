@@ -1,0 +1,58 @@
+# ============================================================================
+# CONFIGURAÇÃO DO PRÉ-PROCESSAMENTO
+# ============================================================================
+
+# ============================================================================
+# CONFIGURAÇÃO DO PRÉ-PROCESSAMENTO - RADIONUCLIDE DATASET
+# ============================================================================
+
+# Configurações gerais
+geral:
+  pasta_dados: "data"  # Pasta onde estão os dados de entrada
+  pasta_saida: "dataset_zenodo"  # Pasta onde serão salvos os resultados
+  arquivo_saida: "dados_processados"  # Nome base para os arquivos de saída
+
+# Configuração do arquivo de entrada
+entrada:
+  arquivo: "OriginalData.xlsx"  # Nome do arquivo de entrada
+  planilha: 0  # Índice da planilha (para Excel)
+  separador: ","  # Separador para CSV (se aplicável)
+  encoding: "utf-8"  # Codificação do arquivo
+  decimal: ","  # Separador decimal na entrada (vírgula para PT-BR)
+
+# Configuração das colunas
+colunas:
+  identificador: "Samples"  # Coluna que identifica cada amostra
+  numericas:  # Colunas com dados numéricos
+    - "226Ra"
+    - "232Th"
+    - "40K"
+    - "Raeq"
+    - "Theq"
+    - "Keq"
+    - "IA"
+    - "IB"
+    - "IG"
+
+# Configuração da classificação de materiais
+classificacao:
+  regras:
+    AR: "Comercial sand"
+    A: "Structural cement"
+    PB: "Crushed rock"
+    HB: "Hollow ceramic / bore brick"
+    PP: "Stone dust"
+    SB: "Solid clay brick"
+    CB: "Concrete block brick"
+  padrao: "Outro"
+
+# Configuração dos formatos de saída
+saida:
+  formatos:
+    - "csv"      # CSV universal (ML)
+    - "xlsx"     # Excel
+  criar_relatorio: true
+  salvar_estatisticas: true
+  criar_graficos: true
+  salvar_codigo: true  # Salvar código na pasta codigo/
+  

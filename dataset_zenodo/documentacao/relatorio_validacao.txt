@@ -1,0 +1,74 @@
+======================================================================
+RELATÓRIO DE VALIDAÇÃO DO DATASET
+======================================================================
+
+ DIMENSÕES: 109 linhas x 11 colunas
+ Gerado em: 13/07/2026 15:30:10
+
+----------------------------------------------------------------------
+(1) VALORES AUSENTES (NaN):
+   OK - 226Ra
+   OK - 232Th
+   OK - 40K
+   OK - Raeq
+   OK - Theq
+   OK - Keq
+   OK - IA
+   OK - IB
+   OK - IG
+
+----------------------------------------------------------------------
+ (2) IDs DUPLICADOS:
+  OK
+
+----------------------------------------------------------------------
+ (3) DISTRIBUIÇÃO DOS MATERIAIS:
+  Comercial sand: 27 amostras (24.8%)
+  Structural cement: 23 amostras (21.1%)
+  Crushed rock: 20 amostras (18.3%)
+  Hollow ceramic / bore brick: 14 amostras (12.8%)
+  Stone dust: 10 amostras (9.2%)
+  Solid clay brick: 9 amostras (8.3%)
+  Concrete block brick: 6 amostras (5.5%)
+
+----------------------------------------------------------------------
+ (4) ESTATÍSTICAS DESCRITIVAS:
+
+ 226Ra:
+    Média: 74.9798
+    Desvio: 44.0562
+    Mínimo: 8.3153
+    Máximo: 266.9085
+    Mediana: 71.4369
+
+ 232Th:
+    Média: 68.3012
+    Desvio: 74.8680
+    Mínimo: 3.5204
+    Máximo: 702.1283
+    Mediana: 54.7039
+
+ 40K:
+    Média: 625.4423
+    Desvio: 325.7762
+    Mínimo: 13.8678
+    Máximo: 1204.7700
+    Mediana: 666.0600
+
+ Raeq:
+    Média: 220.8095
+    Desvio: 141.2470
+    Mínimo: 19.0100
+    Máximo: 1295.2385
+    Mediana: 193.6600
+
+ Theq:
+    Média: 155.1863
+    Desvio: 98.9034
+    Mínimo: 13.3187
+    Máximo: 906.5777
+    Mediana: 136.5601
+
+======================================================================
+ VALIDAÇÃO CONCLUÍDA
+======================================================================
