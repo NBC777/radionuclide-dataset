@@ -243,8 +243,8 @@ REFERÊNCIA E INCIDÊNCIA DE RISCOS},
   year         = {2026},
   publisher    = {Zenodo},
   version      = {1.0},
-  doi          = {10.5281/zenodo.XXXXXXX},
-  url          = {https://doi.org/10.5281/zenodo.XXXXXXX}
+  doi          = {10.5281/zenodo.21348303},
+  url          = {https://doi.org/10.5281/zenodo.21348303}
 }
 ```  
 ---

@@ -280,9 +280,9 @@ If you use this dataset in your research, please cite:
   title        = {Radionuclide Dataset for Construction Materials},
   year         = {2026},
   publisher    = {Zenodo},
-  version      = {1.0},
-  doi          = {10.5281/zenodo.XXXXXXX},
-  url          = {https://doi.org/10.5281/zenodo.XXXXXXX}
+  version      = {1.0},    
+  doi          = {10.5281/zenodo.21348303},
+  url          = {https://doi.org/10.5281/zenodo.21348303}
 }
 ```
 
