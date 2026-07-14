@@ -95,15 +95,16 @@ The dataset includes 7 material types with the following distribution:
 
 | Code | Material Type | Samples | Percentage |
 |------|---------------|---------|------------|
-| C. Sand | Comercial sand | 27 | 24.8% |
-| S. Cem | Structural cement | 23 | 21.1% |
+| AR | Comercial sand | 27 | 24.8% |
+| A | Structural cement | 23 | 21.1% |
 | PB | Crushed rock | 20 | 18.3% |
-| CB | Hollow ceramic / bore brick | 14 | 12.8% |
+| HB | Hollow ceramic / bore brick | 14 | 12.8% |
 | PP | Stone dust | 10 | 9.2% |
 | SB | Solid clay brick | 9 | 8.3% |
 | CB | Concrete block brick | 6 | 5.5% |
 
 ---
+
 
 ##  Calculation of Indices
 
@@ -128,20 +129,89 @@ Keq = AK + 13 × ARa + 10 × ATh
 ```math
 
 IA = ARa/300 + ATh/200 + AK/3000
+```
+
+```math 
 IB = ARa/370 + ATh/259 + AK/4810
+```
+
+```math 
 IG = ARa/185 + ATh/259 + AK/4810
 ```
 
 
 Where:
 ```math
-    ARa = \text{Activity of} ²²⁶Ra (Bq/kg)\\
-
-    ATh = \text{Activity of} ²³²Th (Bq/kg)\\
-
-    AK = \text{Activity of} ⁴⁰K (Bq/kg)
-
+    ARa = \text{Activity of} ²²⁶Ra (Bq/kg)
 ```
+
+```math 
+    ATh = \text{Activity of} ²³²Th (Bq/kg)
+```
+
+```math 
+    AK = \text{Activity of} ⁴⁰K (Bq/kg)
+```  
+
+---
+
+##  Figures
+
+### Distribution of Materials
+
+![Distribution of Materials](figuras/distribuicao_materiais.png)
+
+*Distribution of the 7 material types in the dataset.*
+
+---
+
+### Radionuclide Distribution
+
+![Boxplot of Radionuclides](figuras/boxplot_radionuclideos.png)
+
+*Distribution of ²²⁶Ra, ²³²Th, and ⁴⁰K activities by material type.*
+
+---
+
+### Correlation Matrix
+
+![Correlation Matrix](figuras/matriz_correlacao.png)
+
+*Correlation matrix of radionuclides and radiation indices.*
+
+---
+
+### Relationships Between Variables
+
+![Pairplot](figuras/pairplot_radionuclideos.png)
+
+*Relationships between main variables colored by material type.*
+
+---
+
+### Error Bars
+
+![Error Bars](figuras/barras_erro_materiais.png)
+
+*Mean activities with error bars (±1σ) by material type.*
+
+---
+
+### Indices Distribution
+
+![Histogram of Indices](figuras/histograma_indices.png)
+
+*Distribution of radiation indices (IA, IB, IG) with mean and median lines.*
+
+---
+
+### Statistical Summary
+
+![Statistical Summary](figuras/tabela_estatisticas.png)
+
+*Complete statistical summary of all numerical variables.*
+
+
 
 ---
 
