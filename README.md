@@ -7,7 +7,7 @@
 
 ##  Overview
 
-This repository contains a comprehensive dataset of natural radionuclides (²²⁶Ra, ²³²Th, and ⁴⁰K) in various construction materials, along with calculated radiation indices. The dataset is fully processed, validated, and ready for use in scientific research, machine learning applications, and radiological safety assessments.
+This repository contains a comprehensive dataset of natural radionuclides (\(^{226}\text{Ra}\), \(^{232}\text{Th}\), and \(^{40}\text{K}\)) in various construction materials, along with calculated radiation indices. These data were collected during the doctoral research of Leandro Barbosa da Silva, titled Radiometric Analysis of Construction Materials Commercialized in the State of Rio de Janeiro: Overview for the Implementation of Reference Values and Risk Incidence (2024) (https://www.nuclear.ufrj.br/images/undefined/Tese_Leandro_Barbosa_da_Silva.pdf). The dataset is fully processed, validated, and ready for use in scientific research, machine learning applications, and radiological safety assessments.
 
 ### Key Features
 
