@@ -156,8 +156,8 @@ The dataset includes 7 material types with the following distribution:
 
 | Code | Material Type | Samples | Percentage |
 |------|---------------|---------|------------|
-| C. Sand | Comercial sand | 27 | 24.8% |
-| S. Cem | Structural cement | 23 | 21.1% |
+| AR | Comercial sand | 27 | 24.8% |
+| A | Structural cement | 23 | 21.1% |  
 | PB | Crushed rock | 20 | 18.3% |
 | HB | Hollow ceramic / bore brick | 14 | 12.8% |
 | PP | Stone dust | 10 | 9.2% |
