@@ -212,16 +212,16 @@ $\text{K}_\text{eq}$ = $A  \text{K}$ + 13 \times $A  \text{Ra}$ + 10 \times $A  
 
 ### Alpha radiation index (IA)
 
-IA is an activity concentration index used to assess radiological risk from building materials, with a recommended limit of $I_\text{A} \leq 1 $ for materials used in bulk quantities:
+$I_\text{A}$ is an activity concentration index used to assess radiological risk from building materials, with a recommended limit of $I_\text{A} \leq 1 $ for materials used in bulk quantities:
 
 $I_\text{A}$ = $A  \text{Ra}$ / 300 + $A  \text{Th}$ / 200 + $A  \text{K}$ / 3000
 
-### Brazilian radiation index ($\text{I}_\text{B}$)
+### Brazilian radiation index ($I_\text{B}$)
 
-$\text{I}_\text{B}$ is a composite index used in Brazilian practice to assess the external gamma radiation hazard, with a recommended limit of $\text{I}_\text{B} \leq 1$:
+$I_\text{B}$ is a composite index used in Brazilian practice to assess the external gamma radiation hazard, with a recommended limit of $I_\text{B} \leq 1$:
 
 
-$\text{I}_\text{B}$ = $A  \text{Ra}$ / 370 + $A  \text{Th}$ / 259 + $A  \text{K}$ / 4810
+$I_\text{B}$ = $A  \text{Ra}$ / 370 + $A  \text{Th}$ / 259 + $A  \text{K}$ / 4810
 
 ### Gamma radiation index ($\text{I}_\text{G}$)
 
