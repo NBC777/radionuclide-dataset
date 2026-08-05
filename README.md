@@ -216,26 +216,21 @@ $\text{K}_\text{eq}$ = $A \, \text{K}$ + 13 \times $A \, \text{Ra}$ + 10 \times 
 
 IA is an activity concentration index used to assess radiological risk from building materials, with a recommended limit of $\text{I}_\text{A} \leq 1 $ for materials used in bulk quantities:
 
-```text
-$\text{I}_\text{A}$ = $A \, \text{Ra}$ / 300 + $A \, \text{Th}$ / 200 + $A \, \text{K}$ / 3000
-```
+$\text{I}_\text{A}$ = $A  \text{Ra}$ / 300 + $A  \text{Th}$ / 200 + $A  \text{K}$ / 3000
 
 ### Brazilian radiation index ($\text{I}_\text{B}$)
 
 $\text{I}_\text{B}$ is a composite index used in Brazilian practice to assess the external gamma radiation hazard, with a recommended limit of $\text{I}_\text{B} \leq 1$:
 
-```text
-$\text{I}_\text{B}$ = $A \, \text{Ra}$ / 370 + $A \, \text{Th}$ / 259 + $A \, \text{K}$ / 4810
-```
+
+$\text{I}_\text{B}$ = $A  \text{Ra}$ / 370 + $A  \text{Th}$ / 259 + $A  \text{K}$ / 4810
 
 ### Gamma radiation index ($\text{I}_\text{G}$)
 
-$\text{I}_\text{G}$ is an index designed to account for gamma exposure, with a recommended limit of $\text{I}_\text{G} \leq  1$:
+$I_\text{G}$ is an index designed to account for gamma exposure, with a recommended limit of $I_\text{G} \leq  1$:
 
-```text
-$\text{I}_\text{G}$ = $A \, \text{Ra}$ / 185 + $A \, \text{Th}$ / 259 + $A \, \text{K}$ / 4810
-```
-$\text{I}_\text{G}$ = $A \, \text{Ra}$ / 185 + $A \, \text{Th}$ / 259 + $A \, \text{K}$ / 4810
+
+$\text{I}_\text{G}$ = $A  \text{Ra}$ / 185 + $A  \text{Th}$ / 259 + $A  \text{K}$ / 4810
 
 
 Where:
@@ -348,3 +343,7 @@ Under the condition that you:
 1. Beretka, J., & Mathew, P. J. (1985). Natural radioactivity of Australian building materials, industrial wastes and by-products. *Health Physics*, 48(1), 87–95.  
 2. United Nations Scientific Committee on the Effects of Atomic Radiation (UNSCEAR). (2000). *Sources and Effects of Ionizing Radiation*. Report to the General Assembly.  
 3. European Commission. (1999). *Radiological Protection Principles Concerning the Natural Radioactivity of Building Materials*. Radiation Protection 112.
+
+---
+##  Contact
+nbaygorrea@gmail.com
