@@ -48,6 +48,7 @@ radionuclide-dataset/
 │   │   ├── relatorio_validacao.txt    # Validation report
 │   │   ├── estatisticas_descritivas.csv # Descriptive statistics
 │   │   └── relatorio_completo.md      # Complete processing report
+|   |   └── analise_exploratorio_dataset.pdf  #  exploratory analyses 
 │   ├── figuras/            # Statistical figures
 │   │   ├── distribuicao_materiais.png
 │   │   ├── boxplot_radionuclideos.png
@@ -192,31 +193,28 @@ The radiation indices were calculated using internationally recognized formulas 
 
 $\text{Ra}_\text{eq}$ is a weighted sum of the activities of ${}^{226}\text{Ra}$, ${}^{232}\text{Th}$ and ${}^{40} \text{K}$, under the assumption that 370 Bq/kg of ${}^{226} \text{Ra}$, 259 Bq/kg of ${}^{232} \text{Th}$ and 4810 Bq/kg of ${}^{40} \text{K}$ produce comparable gamma dose rates.
 
-```text
+
 $\text{Ra}_\text{eq}$ = A $\text{Ra}$ + 1.43 \times A $\text{Th}$ + 0.077 \times A $\text{K}$
-```
 
 ### Thorium equivalent activity ($\text{Th}_\text{eq}$)
 
 Theq represents the contribution of thorium to the total radiation dose, expressed as an equivalent activity combining ${}^{232} \text{Th}$, ${}^{226} \text{Ra}$ and ${}^{40}\text{K}$:
 
-```text
-Theq = $A \, \text{Th}$ + 0.7 \times $A \, \text{Ra}$ + 0.045 \times $A \, \text{K}$
-```
+
+$Th_\text{eq}$ = $A \text{Th}$ + 0.7 \times $A  \text{Ra}$ + 0.045 \times $A  \text{K}$
 
 ### Potassium equivalent activity (Keq)
 
 Keq represents the contribution of potassium to the total radiation dose, expressed as an equivalent activity combining ${}^{40} \text{K}$, ${}^{226} \text{Ra}$ and ${}^{232} \text{Th}$:
 
-```text
-$\text{K}_\text{eq}$ = $A \, \text{K}$ + 13 \times $A \, \text{Ra}$ + 10 \times $A \, \text{Th}$
-```
+
+$\text{K}_\text{eq}$ = $A  \text{K}$ + 13 \times $A  \text{Ra}$ + 10 \times $A  \text{Th}$
 
 ### Alpha radiation index (IA)
 
-IA is an activity concentration index used to assess radiological risk from building materials, with a recommended limit of $\text{I}_\text{A} \leq 1 $ for materials used in bulk quantities:
+IA is an activity concentration index used to assess radiological risk from building materials, with a recommended limit of $I_\text{A} \leq 1 $ for materials used in bulk quantities:
 
-$\text{I}_\text{A}$ = $A  \text{Ra}$ / 300 + $A  \text{Th}$ / 200 + $A  \text{K}$ / 3000
+$I_\text{A}$ = $A  \text{Ra}$ / 300 + $A  \text{Th}$ / 200 + $A  \text{K}$ / 3000
 
 ### Brazilian radiation index ($\text{I}_\text{B}$)
 
