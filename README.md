@@ -194,21 +194,21 @@ The radiation indices were calculated using internationally recognized formulas 
 $\text{Ra}_\text{eq}$ is a weighted sum of the activities of ${}^{226}\text{Ra}$, ${}^{232}\text{Th}$ and ${}^{40} \text{K}$, under the assumption that 370 Bq/kg of ${}^{226} \text{Ra}$, 259 Bq/kg of ${}^{232} \text{Th}$ and 4810 Bq/kg of ${}^{40} \text{K}$ produce comparable gamma dose rates.
 
 
-$\text{Ra}_\text{eq}$ = A $\text{Ra}$ + 1.43 \times A $\text{Th}$ + 0.077 \times A $\text{K}$
+$\text{Ra}_\text{eq}$ = A $\text{Ra}$ + 1.43 x A $\text{Th}$ + 0.077 x A $\text{K}$
 
 ### Thorium equivalent activity ($\text{Th}_\text{eq}$)
 
 Theq represents the contribution of thorium to the total radiation dose, expressed as an equivalent activity combining ${}^{232} \text{Th}$, ${}^{226} \text{Ra}$ and ${}^{40}\text{K}$:
 
 
-$Th_\text{eq}$ = $A \text{Th}$ + 0.7 \times $A  \text{Ra}$ + 0.045 \times $A  \text{K}$
+$Th_\text{eq}$ = $A \text{Th}$ + 0.7 x $A  \text{Ra}$ + 0.045 x $A  \text{K}$
 
 ### Potassium equivalent activity (Keq)
 
 Keq represents the contribution of potassium to the total radiation dose, expressed as an equivalent activity combining ${}^{40} \text{K}$, ${}^{226} \text{Ra}$ and ${}^{232} \text{Th}$:
 
 
-$\text{K}_\text{eq}$ = $A  \text{K}$ + 13 \times $A  \text{Ra}$ + 10 \times $A  \text{Th}$
+$\text{K}_\text{eq}$ = $A  \text{K}$ + 13 x $A  \text{Ra}$ + 10 x $A  \text{Th}$
 
 ### Alpha radiation index (IA)
 
