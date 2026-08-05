@@ -235,10 +235,8 @@ $\text{I}_\text{G}$ is an index designed to account for gamma exposure, with a r
 ```text
 $\text{I}_\text{G}$ = $A \, \text{Ra}$ / 185 + $A \, \text{Th}$ / 259 + $A \, \text{K}$ / 4810
 ```
+$\text{I}_\text{G}$ = $A \, \text{Ra}$ / 185 + $A \, \text{Th}$ / 259 + $A \, \text{K}$ / 4810
 
-\[
-I_G = \frac{A_{\mathrm{Ra}}}{185} + \frac{A_{\mathrm{Th}}}{259} + \frac{A_{\mathrm{K}}}{4810}.
-\]
 
 Where:
 
