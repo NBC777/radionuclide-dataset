@@ -187,7 +187,7 @@ The dataset includes 7 material types with the following distribution:
 
 The radiation indices were calculated using internationally recognized formulas (UNSCEAR, 2000; Beretka & Mathew, 1985).
 
-> **Note:** The $\text{Ra}_\text{eq}$ formula below is standard in the literature. The definitions of $\text{Th}_\text{eq}$, $\text{K}_\text{eq}$, $\text{I}_\text{A}$, $\text{I}_\text{B}$ and $\text{I}_\text{G}$ follow the conventions adopted in the underlying doctoral work and Brazilian practice; they may not coincide exactly with all international standards, so users should consult the thesis for formal derivations.
+> **Note:** The $Ra_\text{eq}$ formula below is standard in the literature. The definitions of $Th_\text{eq}$, $K_\text{eq}$, $I_\text{A}$, $I_\text{B}$ and $I_\text{G}$ follow the conventions adopted in the underlying doctoral work and Brazilian practice; they may not coincide exactly with all international standards, so users should consult the thesis for formal derivations.
 
 ### Radium equivalent activity ($\text{Ra}_\text{eq}$)
 
