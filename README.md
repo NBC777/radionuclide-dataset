@@ -160,6 +160,12 @@ Full descriptive statistics are available in `dataset_zenodo/documentacao/estati
 
 ---
 
+### Exploratory statistical analysis
+
+A comprehensive exploratory statistical analysis of the dataset is provided as a PDF report in `dataset_zenodo/documentacao/analise_exploratoria_dataset.pdf`. 
+It includes distribution plots by material type, correlation analysis, boxplots, histograms of radionuclide activities and indices, and extended summary tables.
+
+---
 ## Material classification
 
 The dataset includes 7 material types with the following distribution:
@@ -224,17 +230,21 @@ $\text{I}_\text{B}$ = $A \, \text{Ra}$ / 370 + $A \, \text{Th}$ / 259 + $A \, \t
 
 ### Gamma radiation index ($\text{I}_\text{G}$)
 
-$\text{I}_\text{G}$ is an index designed to account for gamma exposure, with a recommended limit of IG ≤ 1:
+$\text{I}_\text{G}$ is an index designed to account for gamma exposure, with a recommended limit of $\text{I}_\text{G} \leq  1$:
 
 ```text
 $\text{I}_\text{G}$ = $A \, \text{Ra}$ / 185 + $A \, \text{Th}$ / 259 + $A \, \text{K}$ / 4810
 ```
 
+\[
+I_G = \frac{A_{\mathrm{Ra}}}{185} + \frac{A_{\mathrm{Th}}}{259} + \frac{A_{\mathrm{K}}}{4810}.
+\]
+
 Where:
 
-- $A \, \text{Ra}$ = activity of ${}^{226} \text{Ra}$ (Bq/kg)  
-- $A \, \text{Th}$ = activity of ${}^{232} \text{Th}$ (Bq/kg)  
-- $A \, \text{K}$  = activity of ${}^{40} \text{K}$ (Bq/kg)  
+- $A  \text{Ra}$ = activity of ${}^{226} \text{Ra}$ (Bq/kg)  
+- $A  \text{Th}$ = activity of ${}^{232} \text{Th}$ (Bq/kg)  
+- $A  \text{K}$  = activity of ${}^{40} \text{K}$ (Bq/kg)  
 
 ---
 
