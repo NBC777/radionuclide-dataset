@@ -1,106 +1,113 @@
-# Radionuclide Dataset - Construction Materials
+# Radionuclide Dataset – Construction Materials
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 [![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/)
 
 ---
 
-##  Overview
+## Overview
 
-This repository contains a comprehensive dataset of natural radionuclides (\(^{226}\text{Ra}\), \(^{232}\text{Th}\), and \(^{40}\text{K}\)) in various construction materials, along with calculated radiation indices. These data were collected during the doctoral research of Leandro Barbosa da Silva, titled Radiometric Analysis of Construction Materials Commercialized in the State of Rio de Janeiro: Overview for the Implementation of Reference Values and Risk Incidence (2024) (https://www.nuclear.ufrj.br/images/undefined/Tese_Leandro_Barbosa_da_Silva.pdf). The dataset is fully processed, validated, and ready for use in scientific research, machine learning applications, and radiological safety assessments.
+This repository provides a curated dataset of natural radionuclides (${}^{226}\text{Ra}$, ${}^{232}\text{Th}$ and ${}^{40} \text{K}$) in construction materials, together with derived radiation indices. The data were collected during the doctoral research of **Leandro Barbosa da Silva**, titled:
 
-### Key Features
+> *Radiometric Analysis of Construction Materials Commercialized in the State of Rio de Janeiro: Overview for the Implementation of Reference Values and Risk Incidence* (2024)  
+> (https://www.nuclear.ufrj.br/images/undefined/Tese_Leandro_Barbosa_da_Silva.pdf)
 
-- **109 samples** across 7 material types
-- **9 numerical variables** including radionuclide activities and radiation indices
-- **100% data completeness** - no missing values
-- **Fully validated** - no duplicate identifiers
-- **Multiple formats** - CSV (ML-ready), CSV (Brazilian format), Excel
-- **Reproducible preprocessing** - complete code and documentation provided
+The dataset is fully processed, validated and ready for use in scientific research, machine learning applications and radiological safety assessments.
+
+### Key features
+
+- **109 samples** across 7 material types  
+- **9 numerical variables** including radionuclide activities and radiation indices  
+- **100% data completeness** (no missing values)  
+- **Fully validated** (no duplicate identifiers)  
+- **Multiple formats**: CSV (ML-ready), CSV in Brazilian format, Excel  
+- **Reproducible preprocessing**: complete code and documentation provided  
 
 ---
 
-## Repository Structure
+## Repository structure
 
-```
+```text
 radionuclide-dataset/
 │
-├── data/ # Raw data (not included in Zenodo)
-│ └── OriginalData.xlsx
+├── data/                   # Raw data (not included in Zenodo)
+│   └── OriginalData.xlsx
 │
-├── scripts/ # Processing scripts (not included in Zenodo)
-│ ├── preprocessing_.py # Main preprocessing script
-│ ├── config.yaml # Configuration file
-│ └── requirements.txt # Python dependencies
+├── scripts/                # Processing scripts (not included in Zenodo)
+│   ├── preprocessing_.py   # Main preprocessing script
+│   ├── config.yaml         # Configuration file
+│   └── requirements.txt    # Python dependencies
 │
-├── dataset_zenodo/ #  Complete dataset for Zenodo
-│ ├── README.md # Dataset description
-│ ├── dados/ # Processed data files
-│ │ ├── dados_processados.csv # ML format (sep=, dec=.)
-│ │ ├── dados_processados_BR.csv # Brazilian Excel format (sep=; dec=,)
-│ │ └── dados_processados.xlsx # Excel format
-│ ├── documentacao/ # Documentation and reports
-│ │ ├── relatorio_validacao.txt # Validation report
-│ │ ├── estatisticas_descritivas.csv # Descriptive statistics
-│ │ └── relatorio_completo.md # Complete processing report
-│ ├── figuras/ # Statistical figures
-│ │ ├── distribuicao_materiais.png
-│ │ ├── boxplot_radionuclideos.png
-│ │ ├── matriz_correlacao.png
-│ │ ├── pairplot_radionuclideos.png
-│ │ ├── barras_erro_materiais.png
-│ │ ├── histograma_indices.png
-│ │ └── tabela_estatisticas.png
-│ └── codigo/ # Code for reproducibility
-│ ├── preprocessing.py
-│ ├── config.yaml
-│ ├── requirements.txt
-│ ├── environment.yml
-│ └── README.md
+├── dataset_zenodo/         # Complete dataset for Zenodo
+│   ├── README.md           # Dataset-level description
+│   ├── dados/              # Processed data files
+│   │   ├── dados_processados.csv      # ML format (sep=',' dec='.')
+│   │   ├── dados_processados_BR.csv   # Brazilian Excel format (sep=';' dec=',')
+│   │   └── dados_processados.xlsx     # Excel format
+│   ├── documentacao/       # Documentation and reports
+│   │   ├── relatorio_validacao.txt    # Validation report
+│   │   ├── estatisticas_descritivas.csv # Descriptive statistics
+│   │   └── relatorio_completo.md      # Complete processing report
+│   ├── figuras/            # Statistical figures
+│   │   ├── distribuicao_materiais.png
+│   │   ├── boxplot_radionuclideos.png
+│   │   ├── matriz_correlacao.png
+│   │   ├── pairplot_radionuclideos.png  
+│   │   ├── barras_erro_materiais.png
+│   │   ├── histograma_indices.png
+│   │   └── tabela_estatisticas.png
+│   └── codigo/             # Code for reproducibility
+│       ├── preprocessing.py
+│       ├── config.yaml
+│       ├── requirements.txt
+│       ├── environment.yml
+│       └── README.md
 │
-├── LICENSE # MIT License
-└── README.md # This file
-```  
+├── LICENSE                 # MIT License
+└── README.md               # This file
+```
 
 ---
 
-## Quick Start
+## Quick start
 
 ### Prerequisites
 
-- Python 3.10 or higher
-- Conda (recommended) or pip
+- Python 3.10 or higher  
+- Conda (recommended) or pip  
 
 ### Installation
 
-#### Using Conda (recommended)
+Using Conda (recommended):
 
 ```bash
 # Clone the repository
 git clone https://github.com/NBC777/radionuclide-dataset.git
 cd radionuclide-dataset
 
-# Create and activate Conda environment
+# Create and activate the Conda environment
 conda env create -f dataset_zenodo/codigo/environment.yml
 conda activate project_cetem
 
+# Install Python dependencies
 pip install -r dataset_zenodo/codigo/requirements.txt
 
-# Running the Preprocessing
+# Run preprocessing (if you want to reproduce the pipeline)
 python scripts/preprocessing_.py --config scripts/config.yaml
 ```
 
-Loading the Data
-Python (for ML/Analysis)
-```python
+### Loading the data
 
+Python (for ML and analysis):
+
+```python
 import pandas as pd
 
 # Load ML-ready format
 df = pd.read_csv(
-    'dataset_zenodo/dados/dados_processados.csv',
-    sep=',',
-    decimal='.'
+    "dataset_zenodo/dados/dados_processados.csv",
+    sep=",",
+    decimal="."
 )
 
 # Explore the data
@@ -109,164 +116,166 @@ print(df.info())
 print(df.describe())
 ```
 
-Excel (Brazilian Portuguese)
+Excel (Brazilian Portuguese):
 
-Open dataset_zenodo/dados/dados_processados_BR.csv in Excel (automatically recognizes ; as separator and , as decimal).
-Excel (International)
+- Open `dataset_zenodo/dados/dados_processados_BR.csv` in Excel.  
+- Excel will automatically recognize `;` as separator and `,` as decimal symbol.
 
-Open dataset_zenodo/dados/dados_processados.xlsx directly.
+Excel (International):
 
-
-
-## Data Description
-
-### Sample Information
-
-| Variable | Description | Type |
-|----------|-------------|------|
-| **Samples** | Sample identifier code | Categorical |
-| **Material** | Material type classification | Categorical |
-
-### Radionuclide Activities
-
-| Variable | Description | Unit | Mean ± Std | Min | Max |
-|----------|-------------|------|------------|-----|-----|
-| **226Ra** | Radium-226 activity | Bq/kg | 74.98 ± 44.06 | 8.32 | 266.91 |
-| **232Th** | Thorium-232 activity | Bq/kg | 68.30 ± 74.87 | 3.52 | 702.13 |
-| **40K** | Potassium-40 activity | Bq/kg | 625.44 ± 325.78 | 13.87 | 1204.77 |
-
-### Radiation Indices
-
-| Variable | Description | Unit | Mean ± Std | Min | Max |
-|----------|-------------|------|------------|-----|-----|
-| **Raeq** | Radium equivalent activity | Bq/kg | 220.81 ± 141.25 | 19.01 | 1295.24 |
-| **Theq** | Thorium equivalent activity | Bq/kg | 155.19 ± 98.90 | 13.32 | 906.58 |
-| **Keq** | Potassium equivalent activity | Bq/kg | 2651.97 ± 1811.04 | 249.76 | 16805.86 |
-| **IA** | Alpha radiation index | - | 0.37 ± 0.22 | 0.04 | 1.33 |
-| **IB** | Brazilian  radiation index | - | 0.71 ± 0.42 | 0.06 | 3.77 |
-| **IG** | Gamma radiation index | - | 0.80 ± 0.50 | 0.07 | 4.52 |
-
-*Note: Full descriptive statistics available in `dataset_zenodo/documentacao/estatisticas_descritivas.csv`.*
+- Open `dataset_zenodo/dados/dados_processados.xlsx` directly.
 
 ---
 
-## Material Classification
+## Data description
+
+### Sample information
+
+| Variable  | Description                  | Type        |
+|----------|------------------------------|-------------|
+| Samples  | Sample identifier code       | Categorical |
+| Material | Material type classification | Categorical |
+
+### Radionuclide activities
+
+
+| Variable | Description           | Unit  | Mean $\pm$ Std      | Min   | Max    |
+|----------|-----------------------|-------|-----------------|-------|--------|
+| ${}^{226}\text{Ra}$   | Radium-226 activity   | Bq/kg | 74.98 $\pm$ 44.06   | 8.32  | 266.91 |
+| ${}^{232}\text{Th}$    | Thorium-232 activity  | Bq/kg | 68.30 $\pm$ 74.87   | 3.52  | 702.13 |
+| ${}^{40} \text{K}$      | Potassium-40 activity | Bq/kg | 625.44 $\pm$ 325.78 | 13.87 | 1204.77|
+
+### Radiation indices
+
+| Variable | Description                     | Unit  | Mean $\pm$ Std        | Min   | Max      |
+|----------|---------------------------------|-------|-------------------|-------|----------|
+| $\text{Ra}_\text{eq}$     | Radium equivalent activity      | Bq/kg | 220.81 $\pm$ 141.25   | 19.01 | 1295.24  |
+| $\text{Th}_\text{eq}$     | Thorium equivalent activity     | Bq/kg | 155.19 $\pm$ 98.90    | 13.32 | 906.58   |
+| $\text{K}_\text{eq}$      | Potassium equivalent activity   | Bq/kg | 2651.97 $\pm$ 1811.04 | 249.76| 16805.86 |
+| $\text{I}_\text{A}$       | Alpha radiation index           | –     | 0.37 $\pm$ 0.22       | 0.04  | 1.33     |
+| $\text{I}_\text{B}$       | Brazilian radiation index       | –     | 0.71 $\pm$ 0.42       | 0.06  | 3.77     |
+| $\text{I}_\text{G}$       | Gamma radiation index           | –     | 0.80 $\pm$ 0.50       | 0.07  | 4.52     |
+
+Full descriptive statistics are available in `dataset_zenodo/documentacao/estatisticas_descritivas.csv`.
+
+---
+
+## Material classification
 
 The dataset includes 7 material types with the following distribution:
 
-| Code | Material Type | Samples | Percentage |
-|------|---------------|---------|------------|
-| AR | Comercial sand | 27 | 24.8% |
-| A | Structural cement | 23 | 21.1% |  
-| PB | Crushed rock | 20 | 18.3% |
-| HB | Hollow ceramic / bore brick | 14 | 12.8% |
-| PP | Stone dust | 10 | 9.2% |
-| SB | Solid clay brick | 9 | 8.3% |
-| CB | Concrete block brick | 6 | 5.5% |
+| Code | Material type                   | Samples | Percentage |
+|------|---------------------------------|---------|-----------|
+| AR   | Commercial sand                 | 27      | 24.8%     |
+| A    | Structural cement               | 23      | 21.1%     |
+| PB   | Crushed rock                    | 20      | 18.3%     |
+| HB   | Hollow ceramic / bore brick     | 14      | 12.8%     |
+| PP   | Stone dust                      | 10      | 9.2%      |
+| SB   | Solid clay brick                | 9       | 8.3%      |
+| CB   | Concrete block brick            | 6       | 5.5%      |
 
 ---
 
+## Calculation of indices
 
+The radiation indices were calculated using internationally recognized formulas (UNSCEAR, 2000; Beretka & Mathew, 1985).
 
-## Calculation of Indices
+> **Note:** The $\text{Ra}_\text{eq}$ formula below is standard in the literature. The definitions of $\text{Th}_\text{eq}$, $\text{K}_\text{eq}$, $\text{I}_\text{A}$, $\text{I}_\text{B}$ and $\text{I}_\text{G}$ follow the conventions adopted in the underlying doctoral work and Brazilian practice; they may not coincide exactly with all international standards, so users should consult the thesis for formal derivations.
 
-The radiation indices were calculated using internationally recognized formulas (UNSCEAR, 2000; Beretka & Mathew, 1985):
+### Radium equivalent activity ($\text{Ra}_\text{eq}$)
 
-### Radium Equivalent Activity (Raeq)
+$\text{Ra}_\text{eq}$ is a weighted sum of the activities of ${}^{226}\text{Ra}$, ${}^{232}\text{Th}$ and ${}^{40} \text{K}$, under the assumption that 370 Bq/kg of ${}^{226} \text{Ra}$, 259 Bq/kg of ${}^{232} \text{Th}$ and 4810 Bq/kg of ${}^{40} \text{K}$ produce comparable gamma dose rates.
 
-The radium equivalent activity is a weighted sum of the activities of ²²⁶Ra, ²³²Th, and ⁴⁰K, assuming that 370 Bq/kg of ²²⁶Ra, 259 Bq/kg of ²³²Th, and 4810 Bq/kg of ⁴⁰K produce the same gamma dose rate.
-
-```math
-Raeq = ARa + 1.43 × ATh + 0.077 × AK
+```text
+$\text{Ra}_\text{eq}$ = A $\text{Ra}$ + 1.43 \times A $\text{Th}$ + 0.077 \times A $\text{K}$
 ```
 
-### Thorium Equivalent Activity (Theq)
+### Thorium equivalent activity ($\text{Th}_\text{eq}$)
 
-The thorium equivalent activity represents the contribution of thorium to the total radiation dose.
+Theq represents the contribution of thorium to the total radiation dose, expressed as an equivalent activity combining ${}^{232} \text{Th}$, ${}^{226} \text{Ra}$ and ${}^{40}\text{K}$:
 
-```math
-Theq = ATh + 0.7 × ARa + 0.045 × AK
+```text
+Theq = $A \, \text{Th}$ + 0.7 \times $A \, \text{Ra}$ + 0.045 \times $A \, \text{K}$
 ```
 
-### Potassium Equivalent Activity (Keq)
+### Potassium equivalent activity (Keq)
 
-The potassium equivalent activity represents the contribution of potassium to the total radiation dose.
+Keq represents the contribution of potassium to the total radiation dose, expressed as an equivalent activity combining ${}^{40} \text{K}$, ${}^{226} \text{Ra}$ and ${}^{232} \text{Th}$:
 
-```math 
-Keq = AK + 13 × ARa + 10 × ATh
+```text
+$\text{K}_\text{eq}$ = $A \, \text{K}$ + 13 \times $A \, \text{Ra}$ + 10 \times $A \, \text{Th}$
 ```
 
-###  Alpha Radiation  Index (IA)
+### Alpha radiation index (IA)
 
-The activity concentration index is used to assess the radiological risk from building materials, with a recommended limit of IA ≤ 1 for materials used in bulk quantities.
+IA is an activity concentration index used to assess radiological risk from building materials, with a recommended limit of $\text{I}_\text{A} \leq 1 $ for materials used in bulk quantities:
 
-```math 
-IA = ARa/300 + ATh/200 + AK/3000
+```text
+$\text{I}_\text{A}$ = $A \, \text{Ra}$ / 300 + $A \, \text{Th}$ / 200 + $A \, \text{K}$ / 3000
 ```
 
-### Brazilian Radiation Index (IB)
+### Brazilian radiation index ($\text{I}_\text{B}$)
 
-The Brazilian radiation index is used to assess the external gamma radiation hazard, with a recommended limit of IB ≤ 1.
+$\text{I}_\text{B}$ is a composite index used in Brazilian practice to assess the external gamma radiation hazard, with a recommended limit of $\text{I}_\text{B} \leq 1$:
 
-```math
-IB = ARa/370 + ATh/259 + AK/4810
+```text
+$\text{I}_\text{B}$ = $A \, \text{Ra}$ / 370 + $A \, \text{Th}$ / 259 + $A \, \text{K}$ / 4810
 ```
 
-### Gamma  Radiation Index (IG)
+### Gamma radiation index ($\text{I}_\text{G}$)
 
-The internal radiation index accounts for both external and internal exposure, with a recommended limit of IG ≤ 1.
+$\text{I}_\text{G}$ is an index designed to account for gamma exposure, with a recommended limit of IG ≤ 1:
 
-```math
-IG = ARa/185 + ATh/259 + AK/4810
+```text
+$\text{I}_\text{G}$ = $A \, \text{Ra}$ / 185 + $A \, \text{Th}$ / 259 + $A \, \text{K}$ / 4810
 ```
 
 Where:
 
-    - ARa = Activity of ²²⁶Ra (Bq/kg)
-
-    - ATh = Activity of ²³²Th (Bq/kg)
-
-    - AK = Activity of ⁴⁰K (Bq/kg)
-
-
-##  Applications
-
-### Scientific Research
-
-- Radiological safety assessment of building materials
-- Comparative studies of radionuclide concentrations
-- Environmental radioactivity monitoring
-- Health physics and radiation protection
-
-### Machine Learning & AI
-
-- **Generative Adversarial Networks (GANs)**: Generate synthetic radionuclide data for data augmentation
-- **Regression Models**: Predict radiation indices from activities
-- **Classification**: Identify material types based on radionuclide signatures
-- **Dimensionality Reduction**: PCA, t-SNE, UMAP for feature analysis
-- **Anomaly Detection**: Identify unusual radionuclide patterns
-
-### Industrial Applications
-
-- Quality control in construction material production
-- Regulatory compliance testing
-- Supply chain material screening
-- Building certification and safety assessments
+- $A \, \text{Ra}$ = activity of ${}^{226} \text{Ra}$ (Bq/kg)  
+- $A \, \text{Th}$ = activity of ${}^{232} \text{Th}$ (Bq/kg)  
+- $A \, \text{K}$  = activity of ${}^{40} \text{K}$ (Bq/kg)  
 
 ---
 
-## Quality Assurance
+## Applications
 
-The dataset has undergone rigorous validation:
+### Scientific research
 
-| Quality Check | Status |
-|---------------|--------|
-| Missing values | 0 missing (100% complete) |
-| Duplicate samples | 0 duplicates |
-| Data consistency | All numerical values properly typed |
-| Material classification | All samples categorized |
-| Reproducibility | Complete code provided |
-| Documentation | Full documentation available |
+- Radiological safety assessment of building materials  
+- Comparative studies of radionuclide concentrations  
+- Environmental radioactivity monitoring  
+- Health physics and radiation protection  
+
+### Machine learning and AI
+
+- Generative models (GANs, VAEs, flows): synthetic data generation and augmentation  
+- Regression models: prediction of radiation indices from activities  
+- Classification: material-type identification from radionuclide signatures  
+- Dimensionality reduction (PCA, t-SNE, UMAP) for feature analysis  
+- Anomaly detection: identification of unusual radionuclide patterns  
+
+### Industrial applications
+
+- Quality control in construction material production  
+- Regulatory compliance testing  
+- Material screening in supply chains  
+- Building certification and safety assessments  
+
+---
+
+## Quality assurance
+
+The dataset has been subjected to rigorous validation:
+
+| Quality check           | Status                        |
+|-------------------------|-------------------------------|
+| Missing values          | 0 missing (100% complete)     |
+| Duplicate samples       | 0 duplicates                  |
+| Data consistency        | All numerical values typed    |
+| Material classification | All samples categorized       |
+| Reproducibility         | Complete code provided        |
+| Documentation           | Full documentation available  |
 
 ---
 
@@ -276,62 +285,58 @@ If you use this dataset in your research, please cite:
 
 ```bibtex
 @dataset{barbosa_baygorrea_2026_radionuclide,
-  author       = {Leandro Barbosa and Nancy Baygorrea},
-  title        = {Radionuclide Dataset for Construction Materials},
-  year         = {2026},
-  publisher    = {Zenodo},
-  version      = {1.0},    
-  doi          = {10.5281/zenodo.21348303},
-  url          = {https://doi.org/10.5281/zenodo.21348303}
+  author    = {Leandro Barbosa and Nancy Baygorrea},
+  title     = {Radionuclide Dataset for Construction Materials},
+  year      = {2026},
+  publisher = {Zenodo},
+  version   = {1.0},
+  doi       = {10.5281/zenodo.21348303},
+  url       = {https://doi.org/10.5281/zenodo.21348303}
 }
 ```
 
-##  Authors and Acknowledgments
+---
+
+## Authors and acknowledgments
 
 ### Authors
 
-| Author | Contribution |
-|--------|--------------|
-| **Leandro Barbosa^{1}** | Data collection and research |
-| **Nancy Baygorrea** | Preprocessing and documentation |
+| Author               | Contribution                      |
+|----------------------|-----------------------------------|
+| **Leandro Barbosa¹** | Data collection and primary study |
+| **Nancy Baygorrea**  | Preprocessing and documentation   |
 
----
+### Institutional support
 
-### Institutional Support
-
-**^{1}** Laboratory of Simulation and Nuclear Physics  
+¹ Laboratory of Simulation and Nuclear Physics  
 Federal University of Rio de Janeiro (UFRJ)
-
----
 
 ### Funding
 
-**^{1}** This research was supported by the **Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)**  
-Grant/Protocol Number: [XXXXX]
+¹ This research was supported by the **Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq)**.  
+Grant/Protocol Number: [XXXXX].
 
 ---
 
-##  License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License – see the `LICENSE` file for details.
 
-**You are free to:**
--  Use the data for any purpose
--  Modify and adapt the data
--  Share and redistribute
--  Use in commercial applications
+You are free to:
 
-**Under the condition:**
--  Provide attribution to the original authors
+- Use the data for any purpose  
+- Modify and adapt the data  
+- Share and redistribute  
+- Use the data in commercial applications  
+
+Under the condition that you:
+
+- Provide appropriate attribution to the original authors  
 
 ---
 
-##  References
+## References
 
-1. Beretka, J., & Mathew, P. J. (1985). Natural radioactivity of Australian building materials, industrial wastes and by-products. *Health Physics*, 48(1), 87-95.
-
-2. United Nations Scientific Committee on the Effects of Atomic Radiation (UNSCEAR). (2000). *Sources and Effects of Ionizing Radiation*. UNSCEAR Report to the General Assembly.
-
+1. Beretka, J., & Mathew, P. J. (1985). Natural radioactivity of Australian building materials, industrial wastes and by-products. *Health Physics*, 48(1), 87–95.  
+2. United Nations Scientific Committee on the Effects of Atomic Radiation (UNSCEAR). (2000). *Sources and Effects of Ionizing Radiation*. Report to the General Assembly.  
 3. European Commission. (1999). *Radiological Protection Principles Concerning the Natural Radioactivity of Building Materials*. Radiation Protection 112.
-
-

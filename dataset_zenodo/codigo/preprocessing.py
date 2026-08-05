@@ -37,9 +37,9 @@ import seaborn as sns
 from matplotlib import rcParams
      
 
-# ============================================================================
+# ================
 # CLASSE PRINCIPAL
-# ============================================================================
+# ================
 
 class DataPreprocessor:
     """Classe para pré-processamento automatizado de dados."""
@@ -212,24 +212,24 @@ class DataPreprocessor:
         print(" INICIANDO PRÉ-PROCESSAMENTO AUTOMATIZADO")
         print("="*70)
         
-        # ----------------------------------------------------------------
+        # ---------
         # PASSO 1: Localizar e carregar dados
-        # ----------------------------------------------------------------
+        # ------
         arquivo = self._encontrar_arquivo_entrada()
         self._carregar_dados(arquivo)
         
-        # ----------------------------------------------------------------
+        # ----------
         # PASSO 2: Validar colunas
-        # ----------------------------------------------------------------
+        # -----------
         colunas_numericas = self.config['colunas']['numericas']
         colunas_encontradas = self._validar_colunas(colunas_numericas)
         
         if not colunas_encontradas:
             return
         
-        # ----------------------------------------------------------------
+        # -----------
         # PASSO 3: Converter para tipos numéricos
-        # ----------------------------------------------------------------
+        # ---------------
         print("\n Convertendo colunas para numéricas...")
         for col in colunas_encontradas:
             self.df[col] = pd.to_numeric(self.df[col], errors='coerce')
@@ -237,9 +237,9 @@ class DataPreprocessor:
             status = "OK" if nulos == 0 else f" Warning {nulos} NaN"
             print(f"  {col}: {self.df[col].dtype} ({status})")
         
-        # ----------------------------------------------------------------
+        # -------------
         # PASSO 4: Classificar materiais
-        # ----------------------------------------------------------------
+        # -------------
         print("\n  Classificando materiais...")
         coluna_id = self.config['colunas']['identificador']
         self.df['Material'] = self.df[coluna_id].apply(self._classificar_material)
@@ -247,17 +247,17 @@ class DataPreprocessor:
         for material, count in self.df['Material'].value_counts().items():
             print(f"  {material}: {count} amostras ({count/len(self.df)*100:.1f}%)")
         
-        # ----------------------------------------------------------------
+        # ------------------
         # PASSO 5: Reorganizar colunas
-        # ----------------------------------------------------------------
+        # -----------------
         print("\n Reorganizando colunas...")
         ordem_final = [coluna_id, 'Material'] + colunas_encontradas
         self.df = self.df[ordem_final]
         print(f"   Ordem final: {len(ordem_final)} colunas")
         
-        # ----------------------------------------------------------------
+        # ----------------------------------
         # PASSO 6: Verificação de qualidade
-        # ----------------------------------------------------------------
+        # ------------------------------------
         print("\n Verificando qualidade dos dados...")
         
         total_nulos = self.df[colunas_encontradas].isnull().sum().sum()
@@ -284,15 +284,15 @@ class DataPreprocessor:
             'num_materiais': self.df['Material'].nunique()
         })
         
-        # ----------------------------------------------------------------
+        # -------------------------------------
         # PASSO 7: Salvar arquivos processados
-        # ----------------------------------------------------------------
+        # -------------------------------------
         self._salvar_resultados()
         
-        # ----------------------------------------------------------------
-        # ----------------------------------------------------------------
+
+        # --------------------------
         # PASSO 8: Gerar relatórios
-        # ----------------------------------------------------------------
+        # -------------------------
         if self.config['saida'].get('criar_relatorio', True):
             self._gerar_relatorio(colunas_encontradas)
         
@@ -362,16 +362,16 @@ class DataPreprocessor:
         print(f" CSV para ML: {arquivo_csv.name}")
         print(f"   Formato: sep=',' decimal='.'")
         
-        # ============================================================
+        # ===================================
         # 2. SALVAR EXCEL (para visualização)
-        # ============================================================
+        # ===================================
         arquivo_xlsx = pasta_saida / 'dados' / f'{nome_base}.xlsx'
         self.df.to_excel(arquivo_xlsx, index=False, engine='openpyxl')
         print(f"Excel: {arquivo_xlsx.name}")
         
-        # ============================================================
+        # ========================================
         # 3. SALVAR CSV COM TAB (para Excel PT-BR)
-        # ============================================================
+        # ========================================
         arquivo_csv_br = pasta_saida / 'dados' / f'{nome_base}_BR.csv'
         
         # Para o formato brasileiro, precisamos converter para string com vírgula
@@ -505,9 +505,9 @@ class DataPreprocessor:
         pasta_figuras.mkdir(parents=True, exist_ok=True)
         print(f"Folder created: {pasta_figuras}")
         
-        # ============================================================
+        # ============================
         # 1. DISTRIBUTION OF MATERIALS
-        # ============================================================
+        # ==========================
         fig, ax = plt.subplots(figsize=(10, 6))
         contagem = self.df['Material'].value_counts()
         colors = sns.color_palette("husl", len(contagem))
@@ -526,9 +526,9 @@ class DataPreprocessor:
         plt.close()
         print(f" Material distribution")
         
-        # ============================================================
+        # ==========================
         # 2. BOXPLOT OF RADIONUCLIDES
-        # ============================================================
+        # ===========================
         fig, axes = plt.subplots(1, 3, figsize=(16, 6))
         
         radionuclides = ['226Ra', '232Th', '40K']
@@ -574,9 +574,9 @@ class DataPreprocessor:
         plt.close()
         print(f" Boxplot of radionuclides")
         
-        # ============================================================
+        # =====================
         # 3. CORRELATION MATRIX
-        # ============================================================
+        # =====================
         fig, ax = plt.subplots(figsize=(10, 8))
         
         df_corr = self.df[colunas_numericas]
@@ -602,9 +602,9 @@ class DataPreprocessor:
         plt.close()
         print(f"Correlation matrix")
         
-        # ============================================================
+        # ============
         # 4. PAIRPLOT (relationships between main variables)
-        # ============================================================
+        # ==================
         vars_principais = ['226Ra', '232Th', '40K', 'Raeq', 'IA']
         df_pair = self.df[['Material'] + vars_principais].dropna()
         
@@ -622,9 +622,9 @@ class DataPreprocessor:
         plt.close()
         print(f"Pairplot of main variables")
         
-        # ============================================================
+        # ========================
         # 5. ERROR BARS BY MATERIAL
-        # ============================================================
+        # =========================
         fig, ax = plt.subplots(figsize=(12, 6))
         
         stats_by_material = self.df.groupby('Material')[colunas_numericas].agg(['mean', 'std'])
@@ -661,13 +661,13 @@ class DataPreprocessor:
         plt.close()
         print(f"Error bars by material")
         
-        # ============================================================
+        # ======================
         # 6. HISTOGRAM OF INDICES
-        # ============================================================
+        # =======================
         fig, axes = plt.subplots(1, 3, figsize=(15, 5))
         
         indices = ['IA', 'IB', 'IG']
-        titles_idx = ['Activity Index (IA)', 'External Index (IB)', 'Internal Index (IG)']
+        titles_idx = ['Alpha Radiation Index (IA)', 'Brazilian  Radiation Index (IB)', 'Gamma Radiation Index (IG)'] 
         
         for idx, (col, titulo) in enumerate(zip(indices, titles_idx)):
             if col in colunas_numericas:
@@ -690,9 +690,9 @@ class DataPreprocessor:
         plt.close()
         print(f"Histogram of indices")
         
-        # ============================================================
-        # 7. STATISTICAL SUMMARY TABLE (CORRIGIDA)
-        # ============================================================
+        # ============================
+        # 7. STATISTICAL SUMMARY TABLE 
+        # ===========================
         fig, ax = plt.subplots(figsize=(14, 8))
         
         stats_table = self.df[colunas_numericas].describe().round(2)
@@ -711,7 +711,6 @@ class DataPreprocessor:
         table.set_fontsize(9)
         table.scale(1.2, 1.5)
         
-        # Colorir cabeçalho - MÉTODO SEGURO
         # Itera sobre todas as células e colore apenas a primeira linha
         for (row, col), cell in table.get_celld().items():
             if row == 0:  # Primeira linha (cabeçalho)
@@ -742,18 +741,18 @@ class DataPreprocessor:
         import shutil
         from pathlib import Path
         
-        # ============================================================
+        # ===============
         # DEFINIR CAMINHOS
-        # ============================================================
+        # ===============
         pasta_scripts = Path('scripts')
         pasta_codigo = Path(self.config['geral']['pasta_saida']) / 'codigo'
         
         # Criar pasta codigo/ se não existir
         pasta_codigo.mkdir(parents=True, exist_ok=True)
         
-        # ============================================================
+        # ============================
         # 1. COPIAR O SCRIPT PRINCIPAL
-        # ============================================================
+        # =============================
         arquivo_origem = pasta_scripts / 'preprocessing_.py'
         arquivo_destino = pasta_codigo / 'preprocessing.py'
         
@@ -763,9 +762,9 @@ class DataPreprocessor:
         else:
             print(f" Arquivo não encontrado: {arquivo_origem}")
         
-        # ============================================================
+        # =======================
         # 2. COPIAR O CONFIG.YAML
-        # ============================================================
+        # =======================
         arquivo_origem = pasta_scripts / 'config.yaml'
         arquivo_destino = pasta_codigo / 'config.yaml'
         
@@ -775,9 +774,9 @@ class DataPreprocessor:
         else:
             print(f"Arquivo não encontrado: {arquivo_origem}")
         
-        # ============================================================
+        # =============================
         # 3. COPIAR O REQUIREMENTS.TXT
-        # ============================================================
+        # ==============================
         arquivo_origem = pasta_scripts / 'requirements.txt'
         arquivo_destino = pasta_codigo / 'requirements.txt'
         
@@ -787,9 +786,9 @@ class DataPreprocessor:
         else:
             print(f"Arquivo não encontrado: {arquivo_origem}")
         
-        # ============================================================
+        # =========================
         # 4. CRIAR O ENVIRONMENT.YML
-        # ============================================================
+        # ==========================
         arquivo_env = pasta_codigo / 'environment.yml'
         
         # Verifica se já existe na pasta scripts/
@@ -817,9 +816,9 @@ class DataPreprocessor:
         """)
                 print(f"Criado: environment.yml (padrão)")
             
-            # ============================================================
+            # =============================
             # 5. CRIAR README.MD DO CÓDIGO
-            # ============================================================
+            # =============================
             readme_path = pasta_codigo / 'README.md'
             with open(readme_path, 'w', encoding='utf-8') as f:
                 f.write("""# Código para Pré-processamento do Dataset de Radionuclídeos
@@ -867,22 +866,9 @@ class DataPreprocessor:
         print(f"\n Código salvo em: {pasta_codigo}/")   
 
 
-
-                    
-
-
-            
-
-
-
-
-
-
-
-
-# ============================================================================
+# =================
 # EXECUÇÃO PRINCIPAL
-# ============================================================================
+# ==================
 
 def main():
     """Função principal."""
