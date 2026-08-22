@@ -112,31 +112,31 @@ The radiation indices were calculated using internationally recognized formulas:
 
 ### Radium Equivalent Activity (Raeq)
 ```math
-Raeq = ARa + 1.43 × ATh + 0.077 × AK
+Raeq = ARa + 1.43 x ATh + 0.077 x AK
 ```
 
 ### Thorium Equivalent Activity (Theq)
 ```math
-Theq = ATh + 0.7 × ARa + 0.045 × AK
+Theq = ATh + 0.7 x ARa + 0.055 x AK
 ```
 
 ### Potassium Equivalent Activity (Keq)
 ```math
-Keq = AK + 13 × ARa + 10 × ATh
+Keq = AK + 13.24 x ARa + 18.46 x ATh
 ```
 
 ###  Radiation  Index
 ```math
 
-IA = ARa/300 + ATh/200 + AK/3000
+IA = ARa/200 
 ```
 
 ```math 
-IB = ARa/370 + ATh/259 + AK/4810
+IB = 1.2 x ARa/360 + ATh/240 + AK/3600
 ```
 
 ```math 
-IG = ARa/185 + ATh/259 + AK/4810
+IG = ARa/300 + ATh/200 + AK/3000
 ```
 
 
@@ -340,11 +340,11 @@ Dataset Repository:
 
 ### Version History
 Version	Date	Changes
-1.0	2026-07-12	Initial release
+1.0	2026/07/12	Initial release
 
 Last Updated: 2026-07-12
 Version: 1.0
-Status:  Active - Ready for Use
+Status:  Active:  Ready for Use
 
 
 

@@ -201,34 +201,36 @@ $\text{Ra}_\text{eq}$ = A $\text{Ra}$ + 1.43 x A $\text{Th}$ + 0.077 x A $\text{
 Theq represents the contribution of thorium to the total radiation dose, expressed as an equivalent activity combining ${}^{232} \text{Th}$, ${}^{226} \text{Ra}$ and ${}^{40}\text{K}$:
 
 
-$Th_\text{eq}$ = $A \text{Th}$ + 0.7 x $A  \text{Ra}$ + 0.045 x $A  \text{K}$
+$Th_\text{eq}$ = $A \text{Th}$ + 0.7 x $A  \text{Ra}$ + 0.055 x $A  \text{K}$
 
 ### Potassium equivalent activity (Keq)
 
 Keq represents the contribution of potassium to the total radiation dose, expressed as an equivalent activity combining ${}^{40} \text{K}$, ${}^{226} \text{Ra}$ and ${}^{232} \text{Th}$:
 
 
-$\text{K}_\text{eq}$ = $A  \text{K}$ + 13 x $A  \text{Ra}$ + 10 x $A  \text{Th}$
+$\text{K}_\text{eq}$ = $A  \text{K}$ + 13.24 x $A  \text{Ra}$ + 18.46 x $A  \text{Th}$
 
 ### Alpha radiation index (IA)
 
 $I_\text{A}$ is an activity concentration index used to assess radiological risk from building materials, with a recommended limit of $I_\text{A} \leq 1 $ for materials used in bulk quantities:
 
-$I_\text{A}$ = $A  \text{Ra}$ / 300 + $A  \text{Th}$ / 200 + $A  \text{K}$ / 3000
+$I_\text{A}$ = $A  \text{Ra}$ / 200 
 
 ### Brazilian radiation index ($I_\text{B}$)
 
 $I_\text{B}$ is a composite index used in Brazilian practice to assess the external gamma radiation hazard, with a recommended limit of $I_\text{B} \leq 1$:
 
 
-$I_\text{B}$ = $A  \text{Ra}$ / 370 + $A  \text{Th}$ / 259 + $A  \text{K}$ / 4810
+$I_\text{B}$ = $(1 + F_r) x A \text{Ra}$ / 360 + $A  \text{Th}$ / 240 + $A  \text{K}$ / 3600,
+
+where $F_r$ emanation factor considered is 0.2 in this experiment. 
 
 ### Gamma radiation index ($\text{I}_\text{G}$)
 
 $I_\text{G}$ is an index designed to account for gamma exposure, with a recommended limit of $I_\text{G} \leq  1$:
 
 
-$\text{I}_\text{G}$ = $A  \text{Ra}$ / 185 + $A  \text{Th}$ / 259 + $A  \text{K}$ / 4810
+$\text{I}_\text{G}$ = $A  \text{Ra}$ / 300 + $A  \text{Th}$ / 200 + $A  \text{K}$ / 3000
 
 
 Where:
