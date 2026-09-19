@@ -16,10 +16,10 @@ The dataset is fully processed, validated and ready for use in scientific resear
 
 ### Key features
 
-- **109 samples** across 7 material types  
+- **109 samples** across 7 material types      
 - **9 numerical variables** including radionuclide activities and radiation indices  
 - **100% data completeness** (no missing values)  
-- **Fully validated** (no duplicate identifiers)  
+- **Fully validated** (no duplicate identifiers)    
 - **Multiple formats**: CSV (ML-ready), CSV in Brazilian format, Excel  
 - **Reproducible preprocessing**: complete code and documentation provided  
 
